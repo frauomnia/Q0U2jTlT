@@ -13,10 +13,9 @@ test('deleting a parent removes all descendants', async ({ page }) => {
   await rootPostBtn(page).click();
   await expect(page.getByText('Parent A', { exact: true })).toBeVisible();
 
-// wait for the root editor to be back after the re-render
-const editor = rootTextarea(page);
-await editor.waitFor({ timeout: 10_000 });
-await expect(editor).toBeEditable();
+  // wait for the root editor to be back after the re-render
+  await expect(rootTextarea(page)).toBeVisible({ timeout: 10_000 });
+  await expect(rootTextarea(page)).toHaveValue('', { timeout: 10_000 });
   
   await rootTextarea(page).fill('Parent B');
   await rootPostBtn(page).click();
