@@ -6,8 +6,8 @@ vi.mock('../../../queries/comments', () => ({
   addComment: vi.fn().mockResolvedValue(undefined),
 }));
 
-import { addComment } from '../../../queries/comments';
-import { AddComment } from '../../../components/Comments/AddComment';
+import { addComment } from '../../queries/comments';
+import { AddComment } from '../../components/Comments/AddComment';
 
 describe('<AddComment />', () => {
   it('submits root comment and clears input', async () => {

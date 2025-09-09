@@ -2,7 +2,7 @@
 import { render, screen, within, waitForElementToBeRemoved } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { describe, it, expect } from 'vitest';
-import { Comments } from '../../../components/Comments/Comments';
+import { Comments } from '../../components/Comments/Comments';
 
 // Helpers
 const rootTextarea = () => screen.getAllByPlaceholderText(/add a comment/i).pop()!;

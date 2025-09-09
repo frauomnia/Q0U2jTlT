@@ -1,7 +1,7 @@
 import { render, screen, within } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { describe, it, expect } from 'vitest';
-import { Comments } from '../../../components/Comments/Comments';
+import { Comments } from '../../components/Comments/Comments';
 
 // helpers to always target the *root* composer at the bottom
 const rootTextarea = () => {
