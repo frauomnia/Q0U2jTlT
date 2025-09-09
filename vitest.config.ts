@@ -7,5 +7,36 @@ export default defineConfig({
     environment: 'jsdom',
     globals: true,
     setupFiles: './src/tests/setup/setupTests.ts',
+    coverage: {
+      provider: 'v8',                
+      reporter: ['text', 'html', 'lcov'],
+      reportsDirectory: './coverage',
+      thresholds: {                         
+        lines: 80,
+        functions: 80,
+        branches: 80,
+        statements: 80,
+      },
+      exclude: [
+        'src/main.tsx',
+        'src/App.tsx',
+        // top-level config
+        'vite.config.*',
+        'vitest.config.*',
+        'playwright.config.*',
+        'eslint.config.*',
+        'tailwind.config.*',
+        'postcss.config.*',
+        'tsconfig.*',
+        // env & setup
+        'src/**/*.d.ts',
+        '**/env.d.ts',
+        'tests/setup/**',
+        // misc build/infra
+        'scripts/**',
+        'coverage/**',
+        'node_modules/**',
+      ],
+    },
   },
 });
