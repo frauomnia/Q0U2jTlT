@@ -1,7 +1,7 @@
 import '@testing-library/jest-dom/vitest';  
 import 'fake-indexeddb/auto';               // IndexedDB polyfill for Dexie
 
-import { afterEach, beforeEach } from 'vitest';
+import { afterEach, beforeEach, vi } from 'vitest';
 import { cleanup } from '@testing-library/react';
 import { db } from '../../db/db';
 
@@ -9,6 +9,7 @@ import { db } from '../../db/db';
 beforeEach(async () => {
   await db.delete();
   await db.open();
+  vi.clearAllMocks();   // clears call counts/instances on all mocks
 });
 
 afterEach(() => {
