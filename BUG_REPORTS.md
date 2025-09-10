@@ -19,6 +19,9 @@ The full text renders inline. Long blocks push other comments off-screen, requir
 ### Expected Result
 Long comments should truncate after a reasonable height/line count with a **“Read more / Show less”** control.
 
+### Evidence 
+[View screenshot on Google Drive] https://drive.google.com/file/d/1NzCNth7iWQJf_yQDWU8ZUtFo1c1d3Ni5/view?usp=sharing
+
 ---
 
 ## UI-02 — Metadata & actions appear in the middle of comment content
@@ -37,6 +40,9 @@ Timestamp and delete button render inside the comment bubble, centered among tex
 
 ### Expected Result
 Metadata and actions should be consistently visible in a predictable area (e.g., header/top-right of each comment).
+
+### Evidence 
+[View screenshot on Google Drive] https://drive.google.com/file/d/1T8mxpIDWvYPYt_aF2HQyFmLGTMIj5kTy/view?usp=sharing
 
 ---
 
@@ -59,6 +65,9 @@ Comment is deleted immediately without confirmation. The initial tap reveals the
 - Delete button should only be actionable when explicitly targeted (visible, consistent location).
 - A confirmation step (modal/dialog) must precede deletion.
 
+### Evidence 
+[View screenrecording on Google Drive] https://drive.google.com/file/d/1Mszu3W4bZjaSU2gcLzsf_mIxfCtl74dB/view?usp=sharing
+
 ---
 
 ## DATA-01 — `childComments` not updated after adding replies (IndexedDB)
@@ -78,5 +87,8 @@ Parent record’s `childComments` array remains `[]`.
 ### Expected Result
 - **Option A:** Keep `childComments` and append the child id on reply creation.
 - **Option B:** Remove `childComments` entirely and derive children by querying `parentId`.
+
+### Evidence 
+[View screenrecording on Google Drive] https://drive.google.com/file/d/1tzpk0AbGkHGAlhjoSderaB1xG3aS0NHM/view?usp=sharing
 
 ---
