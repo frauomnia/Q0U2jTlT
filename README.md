@@ -23,6 +23,12 @@ See [QA_PROCESS.md](./QA_PROCESS.md).
 ### Bonus – Bug Reports
 See [BUG_REPORTS.md](./BUG_REPORTS.md) for 4 issues discovered during testing.
 
+## Notes / Future Improvements
+
+- With more time, I would add a **manual test plan** covering structured test cases and exploratory scenarios.  
+- I would extend the automated tests to include **error handling and negative user journeys** (e.g., invalid input, offline mode, edge cases).  
+- I limited bug reporting to a few examples to **showcase my bug reporting style and prioritization**. In a real project, I would perform a broader exploratory session and file additional bugs as needed.  
+
 ---
 
 ## Running Locally
