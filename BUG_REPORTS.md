@@ -42,8 +42,8 @@ Metadata and actions should be consistently visible in a predictable area (e.g.,
 
 ## FUNC-01 — Accidental delete on mobile due to invisible-but-tappable area
 **Type:** Functional / UX (Destructive action)  
-**Severity:** **High**  
-**Priority:** **High**  
+**Severity:** High 
+**Priority:** High  
 **Environment:** Local dev build @ http://localhost:5173/, iPhone 14 Pro Max (iOS Safari 17)
 
 ### Steps to Reproduce (Mobile)
