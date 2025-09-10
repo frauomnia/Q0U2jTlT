@@ -1,4 +1,3 @@
-// tests/e2e/cross-tab-sync.spec.ts
 import { test, expect } from '@playwright/test';
 import { resetIndexedDB, rootTextarea, rootPostBtn } from './_helpers';
 

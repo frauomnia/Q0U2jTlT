@@ -1,4 +1,3 @@
-// delete-cascade.spec.ts
 import { test, expect } from '@playwright/test';
 import { resetIndexedDB, rootTextarea, rootPostBtn, rowWithExactText, replyEditorForRow, clickDeleteInRow } from './_helpers';
 

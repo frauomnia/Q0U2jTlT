@@ -7,6 +7,13 @@ export default defineConfig({
     environment: 'jsdom',
     globals: true,
     setupFiles: './src/tests/setup/setupTests.ts',
+    exclude: [
+      'node_modules/**',
+      'dist/**',
+      'coverage/**',
+      'src/tests/e2e/**',
+      'tests/e2e/**',
+    ],
     coverage: {
       provider: 'v8',                
       reporter: ['text', 'html', 'lcov'],
@@ -36,6 +43,9 @@ export default defineConfig({
         'scripts/**',
         'coverage/**',
         'node_modules/**',
+        'node_modules/**',
+        'dist/**',
+        'src/tests/e2e/**',
       ],
     },
   },

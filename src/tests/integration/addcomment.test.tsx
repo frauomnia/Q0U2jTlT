@@ -2,9 +2,13 @@ import { render, screen, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { vi, describe, it, expect } from 'vitest';
 
-vi.mock('../../../queries/comments', () => ({
-  addComment: vi.fn().mockResolvedValue(undefined),
-}));
+vi.mock('../../queries/comments', async () => {
+  const actual = await vi.importActual<typeof import('../../queries/comments')>('../../queries/comments');
+  return {
+    ...actual,
+    addComment: vi.fn().mockResolvedValue(123), // spy
+  };
+});
 
 import { addComment } from '../../queries/comments';
 import { AddComment } from '../../components/Comments/AddComment';
